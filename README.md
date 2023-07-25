@@ -81,7 +81,7 @@ Dilakukan analisa dengan teknik *univarate* EDA untuk mengetahui informasi yang 
 
 **Variabel Year-Of-Publication**
 
-![](image\univariate_year_publish.png)
+![](image/univariate_year_publish.png)
 
 Gambar 1. Grafik Persebaran Jumlah Data Variabel Year-Of-Publication
 
@@ -112,7 +112,7 @@ Tabel 1. Tabel Jumlah Data dan Persentase Variabel Book-Author
 
 
 
-![](image\univariate_author.png)
+![](image/univariate_author.png)
 
 Gambar 2. Sepuluh Nama Penulis Terbanyak yang muncul di dataset
 
@@ -140,7 +140,7 @@ Tabel 2. Jumlah Data dan Persentase Variabel Publisher
 | Ugly Town               | 1             | 0.0        |
 | Connaught               | 1             | 0.0        |
 
-![](image\univariate_publisher.png)
+![](image/univariate_publisher.png)
 
 Gambar 3. Sepuluh Nama Penerbit Buku Terbanyak yang muncul di dataset
 
@@ -168,7 +168,7 @@ Tabel 3. Jumlah Data dan Persentase Variabel Book-Rating
 | 2           | 2759          | 0.2        |
 | 1           | 1770          | 0.2        |
 
-![](image\univariate_rating.png)
+![](image/univariate_rating.png)
 
 Gambar 4. Visualisasi Frekuensi Jumlah Rating di dataset
 
@@ -199,7 +199,7 @@ Pada proyek ini berfokus di metode *collaborative filtering* yaitu metode yang m
 
 * *Collaborative filtering* dengan teknik SVD (*Single Value Decomposition*). Implementasi model SVD di proyek ini menggunakan library [Surprise](https://surprise.readthedocs.io/en/stable/getting_started.html). Cara kerja **collaborative filtering* dengan teknik SVD adalah dengan menggunakan matriks  yang setiap barisnya merepresentasikan pembaca dan kolomnya merepresentasikan buku kemudian dilakukan faktorisasi matriks  dengan SVD yang akan mengekstrak *latent factor* menghasilkan pemetaan relasi antara pembaca dan buku. SVD memecah matriks menjadi 3 matriks yaitu matriks U yang merepresentasikan hubungan antara pembaca dengan *latent factor*, matriks S merupakan matriks  diagonal yang merepresentasikan tingkat variasi dari *latent factor* dan matriks V yang merepresentasikan hubungan antara buku dengan *latent factor*. *Latent factor*  adalah karakteristik dari buku yang digunakan dalam hal ini variabel Book-Rating.
 
-  ![](image\SVD_GEA.jpg)
+  ![](image/SVD_GEA.jpg)
 
   
 
@@ -237,7 +237,7 @@ Pada proyek ini berfokus di metode *collaborative filtering* yaitu metode yang m
 
   Proses yang ada di model RecommenderNet adalah *match score* antara pembaca dan buku dihitung menggunakan *dot product* kemudian hasil ini ditambahkan dengan nilai bias pembaca dan bias buku. Hasil akhir akan di skala ulang dengan nilai 0 sampai 1 menggunakan *sigmoid activation* yang mana nilai rating sudah di skala ulang menjadi 0 sampai 1 di tahap persiapan data. Jumlah *embedding layer* yang digunakan adalah 4. Ilustrasi cara kerja *Neural Network* dapat dilihat di Gambar 9.
 
-  ![](image\fully-connected-layers-neural-network.png)
+  ![](image/fully-connected-layers-neural-network.png)
 
   Gambar 6. Ilustrasi Cara Kerja Neural Network di Sistem Rekomendasi
 
@@ -273,7 +273,7 @@ Metric yang digunakan untuk mengevaluasi model adalah RMSE (*Root Mean Squared E
 
 Rumus RMSE
 
-![](image\rmse.png)
+![](image/rmse.png)
 
 ```
 Dengan n = jumlah dataset, yi = nilai sebenarnya , ŷi = nilai prediksi
